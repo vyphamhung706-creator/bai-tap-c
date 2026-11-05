@@ -1,84 +1,196 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Lab 5 · Portfolio thực hành</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phạm Hùng Vỹ – Portfolio cá nhân</title>
+  <meta name="description" content="Portfolio của Phạm Hùng Vỹ, sinh viên CNTT Đại học Đại Nam - Lập trình & Thiết kế Web.">
+  
+  <!-- Font chữ Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header><a class="brand" href="#gioi-thieu">FIT / PORTFOLIO V5</a>
-        <nav class="menu" aria-label="Điều hướng chính">
-            <a href="#gioi-thieu">Giới thiệu</a><a href="#ky-nang">Kỹ năng</a>
-            <a href="#du-an">Dự án</a><a href="#lo-trinh">Lộ trình</a><a href="#lien-he">Liên hệ</a>
-        </nav>
-    </header>
-    <main>
-        <section class="hero" id="gioi-thieu"><span>LAB 5 · HTML5 + CSS3</span>
-            <h1>Xin chào, tôi là Hùng Vỹ</h1>
-            <p>Sinh viên CNTT đang xây dựng Portfolio có thể dùng bằng chuột và bàn phím.</p>
-            <a class="button" href="#lien-he">Liên hệ với tôi</a>
-        </section>
-        <section id="ky-nang">
-            <h2>Kỹ năng</h2>
-            <ul class="skills">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Responsive</li>
-            </ul>
-        </section>
-        <section id="du-an">
-            <h2>Dự án</h2>
-            <div class="project-grid">
-                <article class="card"><span class="tag">HTML5</span>
-                    <h3>Trang giới thiệu cá nhân</h3>
-                    <p>Tổ chức nội dung với header, nav, main và footer.</p><a href="#lo-trinh">Xem lộ trình HTML5</a>
-                </article>
-                <article class="card"><span class="tag">Responsive</span>
-                    <h3>Bố cục nhiều thiết bị</h3>
-                    <p>Chia cột bằng Grid, dùng rem và media query.</p><a href="#lo-trinh">Xem lộ trình CSS</a>
-                </article>
-                <article class="card"><span class="tag">Trải nghiệm</span>
-                    <h3>Form liên hệ dễ dùng</h3>
-                    <p>Nhãn rõ ràng, kiểm tra dữ liệu và chỉ báo focus.</p><a href="#lien-he">Thử form liên hệ</a>
-                </article>
-            </div>
-        </section>
-        <section id="lo-trinh">
-            <h2>Lộ trình học tập</h2>
-            <ol>
-                <li>Lab 2: nội dung HTML5.</li>
-                <li>Lab 3: CSS, Flexbox và Grid.</li>
-                <li>Lab 4: rem và media query.</li>
-                <li>Lab 5: tương tác và form.</li>
-            </ol>
-        </section>
-        <section id="lien-he">
-            <h2>Liên hệ</h2>
-            <p>Form mô phỏng, chưa gửi email hoặc lưu vào cơ sở dữ liệu. Chỉ nhập dữ liệu giả.</p>
-            <form action="ket-qua.html" method="get">
-                <div class="form-field">
-                    <label for="fullname">Họ tên (bắt buộc)</label><!-- 4.1 -->
-                    <input id="fullname" name="fullname" type="text" autocomplete="name" required
-                        minlength="2"><!-- 4.4 -->
-                </div>
-                <div class="form-field"><label for="email">Email (bắt buộc)</label>
-                    <input id="email" name="email" type="email" required autocomplete="email"
-                        aria-describedby="email-help"><!-- 4.2; 4.3 -->
-                    <p class="help" id="email-help">Ví dụ: an@example.com</p>
-                </div>
-                <div class="form-field"><label for="message">Nội dung (bắt buộc)</label>
-                    <textarea id="message" name="message" rows="4" required minlength="10" maxlength="500"
-                        aria-describedby="message-help"></textarea><!-- 4.5; 4.6; 4.7 -->
-                    <p class="help" id="message-help">Nhập từ 10 đến 500 ký tự.</p>
-                </div>
-                <button class="button" type="submit">Kiểm tra biểu mẫu</button><!-- 4.8 -->
-            </form>
-        </section>
-    </main>
-    <footer>FIT – DNU · Bài mẫu Lab 5 · HTML/CSS thuần</footer>
-</body>
 
+  <!-- (1) Navigation bar -->
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="#gioi-thieu">Hùng Vỹ<span>.</span></a>
+      <ul class="menu">
+        <li><a href="#gioi-thieu">Giới thiệu</a></li>
+        <li><a href="#ve-toi">Về tôi</a></li>
+        <li><a href="#ky-nang">Kỹ năng</a></li>
+        <li><a href="#du-an">Dự án</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- (2) Nội dung chính -->
+  <main>
+
+    <!-- HERO SECTION -->
+    <section id="gioi-thieu" class="hero container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-hello">👋 Sinh viên năm nhất · Đại học Đại Nam</p>
+          <h1>Xin chào, mình là <span class="highlight">Phạm Hùng Vỹ</span></h1>
+          <p class="hero-sub">Đam mê phát triển web, thích viết code, lập trình và chơi bóng chuyền. Đây là không gian nhỏ giới thiệu bản thân và các dự án học tập của mình.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#ve-toi">Làm quen với mình</a>
+            <a class="btn btn-ghost" href="#du-an">Xem dự án</a>
+          </div>
+        </div>
+
+        <figure class="portrait">
+          <img src="vỹ.jpg" onerror="this.onerror=null;this.src='images/avatar.svg'" alt="Chân dung Phạm Hùng Vỹ" width="480" height="600">
+          <span class="chip chip-1">💻 Lập trình Web</span>
+          <span class="chip chip-2">🏐 Bóng chuyền</span>
+          <span class="chip chip-3">🚀 Sáng tạo</span>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VỀ TÔI & SỞ THÍCH -->
+    <section id="ve-toi" class="section container">
+      <div class="section-title">
+        <h2>Về tôi</h2>
+        <span class="title-bar"></span>
+      </div>
+
+      <div class="about">
+        <p class="about-text">
+          Mình là Vỹ, sinh viên năm nhất ngành <strong>Công nghệ Thông tin</strong> tại Đại học Đại Nam (Lớp CNTT 20-04, MSSV: 2071020204).
+          Mình đam mê việc biến những ý tưởng thành các giao diện web sinh động bằng dòng code chuẩn hóa.
+          Mục tiêu của mình là xây dựng các trang web giao diện đẹp, truy cập nhanh và tương thích tốt trên mọi thiết bị di động.
+        </p>
+        <dl class="about-list">
+          <div><dt>Họ và tên</dt><dd>Phạm Hùng Vỹ</dd></div>
+          <div><dt>Mã sinh viên</dt><dd>2071020204</dd></div>
+          <div><dt>Lớp</dt><dd>CNTT 20-04</dd></div>
+          <div><dt>Quê quán</dt><dd>Thái Nguyên</dd></div>
+          <div><dt>Email</dt><dd><a href="vyphamhung706@gmail.com">vyphamhung706@gmail.com</a></dd></div>
+        </dl>
+      </div>
+
+      <h3 class="sub-title">Sở thích cá nhân</h3>
+      <div class="hobbies">
+        <!-- Ảnh sở thích 1 -->
+        <figure class="hobby-card">
+          <div class="img-wrapper">
+            <img src="vy134.jpg" onerror="this.onerror=null;this.src='images/hobby-code.svg'" alt="Góc lập trình" loading="lazy">
+          </div>
+          <figcaption>
+            <strong>Góc lập trình</strong>
+            <span>Khám phá công nghệ mới mỗi ngày</span>
+          </figcaption>
+        </figure>
+
+        <!-- Ảnh sở thích 2 -->
+        <figure class="hobby-card">
+          <div class="img-wrapper">
+            <img src="vy11.jpg" onerror="this.onerror=null;this.src='images/hobby-music.svg'" alt="Đam mê code" loading="lazy">
+          </div>
+          <figcaption>
+            <strong> Abum của tôi</strong>
+            <span>Tận hưởng những bức ảnh đẹp</span>
+          </figcaption>
+        </figure>
+
+        <!-- Ảnh sở thích 3 -->
+        <figure class="hobby-card">
+          <div class="img-wrapper">
+            <img src="vybong.jpg" onerror="this.onerror=null;this.src='images/hobby-badminton.svg'" alt="Chơi bóng chuyền" loading="lazy">
+          </div>
+          <figcaption>
+            <strong>Bóng chuyền</strong>
+            <span>Rèn luyện thể thao & giải tỏa căng thẳng</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- KỸ NĂNG -->
+    <section id="ky-nang" class="section container">
+      <div class="section-title">
+        <h2>Kỹ năng</h2>
+        <span class="title-bar"></span>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>HTML5 Ngữ nghĩa</h3>
+          <p>Sử dụng các thẻ ngữ nghĩa (nav, main, section, article, footer) giúp cấu trúc web rõ ràng, chuẩn SEO và dễ truy cập.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚡</div>
+          <h3>CSS Flexbox & Grid</h3>
+          <p>Thạo cách dàn trang hiện đại bằng Flexbox và CSS Grid, kết hợp Biến CSS (Variables) để dễ quản lý giao diện.</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>Responsive Design</h3>
+          <p>Thiết kế giao diện thích ứng mượt mà trên Desktop, Tablet và Mobile bằng Media Queries.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DỰ ÁN -->
+    <section id="du-an" class="section container">
+      <div class="section-title">
+        <h2>Dự án tiêu biểu</h2>
+        <span class="title-bar"></span>
+      </div>
+
+      <div class="projects-grid">
+        <article class="card">
+          <div class="card-img">
+            <img src="123.png" alt="Portfolio cá nhân" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="tag">Web Design</span>
+            <h3>Portfolio Cá Nhân</h3>
+            <p>Trang web giới thiệu bản thân tối ưu HTML5 ngữ nghĩa, giao diện responsive mượt mà và phối màu cá nhân hóa.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="CAPHE.png" alt="Landing page quán cà phê" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="tag">Landing Page</span>
+            <h3>Landing Page Quán Cà Phê</h3>
+            <p>Giao diện giới thiệu thực đơn, không gian quán và chức năng đặt bàn trực tuyến tập trung vào trải nghiệm người dùng.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-img">
+            <img src="456.png" alt="Ứng dụng To-Do List" loading="lazy">
+          </div>
+          <div class="card-body">
+            <span class="tag">Web App</span>
+            <h3>Danh Sách Việc Cần Làm</h3>
+            <p>Ứng dụng quản lý công việc hàng ngày giúp theo dõi tiến độ, phân chia bố cục giao diện trực quan.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- (5) Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 <strong>Phạm Hùng Vỹ</strong> · MSSV: 2071020204 · Lớp CNTT 20-04 · Đại học Đại Nam</p>
+      <p class="footer-email">✉️ Email: <a href="mailto:email-cua-ban@gmail.com">email-cua-ban@gmail.com</a></p>
+      <p class="footer-note">Bài tập A2.1 – FIT4014 Thiết kế Web và Triển khai HTPM</p>
+    </div>
+  </footer>
+
+</body>
 </html>
