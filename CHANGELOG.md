@@ -1,6 +1,6 @@
 CHANGELOG – PORTFOLIO CÁ NHÂN
-Version 8.0 – 05/11/2026
-Những nội dung đã cập nhật
+V8 – 05/11/2026
+Những thay đổi so với V7
 Hoàn thiện giao diện Portfolio cá nhân.
 Cập nhật nội dung giới thiệu bản thân.
 Bổ sung hình ảnh và thông tin cá nhân.
@@ -12,6 +12,5 @@ HTML5
 CSS3
 GitHub
 GitHub Pages
-Trạng thái
-
-Hoàn thành và xuất bản website.
+Trạng thái kiểm tra
+Chưa kiểm tra.
